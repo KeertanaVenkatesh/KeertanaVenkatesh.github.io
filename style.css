@@ -79,6 +79,7 @@ font-family: Quantify;
 	border-style: dashed;
 	border-width: 5px;
 	border-color: black;
+	padding: 10px;
 }
 .five {
 	grid-area: five;
