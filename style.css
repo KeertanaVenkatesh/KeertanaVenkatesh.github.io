@@ -1,104 +1,125 @@
-<style>
 * {
-  box-sizing: border-box;
+	margin: 0;
+	padding: 0;
+
+}
+.grid div:nth-child(odd) {
+	//background-color: black;
+}
+.grid div:nth-child(even) {
+	//background-color: #d5f5ec;
 }
 
-body {
-  font-family: Arial;
-  padding: 10px;
-  background: #f1f1f1;
+.grid {
+	display: grid;
+	color: black;
+	background-color: #d5f5ec;
+	//grid-gap: 10px;
+	grid-template-columns: 3fr 3fr 1fr 4fr 1fr 4fr 3fr 3fr;
+	grid-template-rows: auto auto auto auto auto;
+	grid-template-areas:
+	"one one ten ten eleven eleven twelve twelve"
+	"two two three three three four five five"
+	"two two three three three four five five"
+    "six seven seven eight nine nine five five"
+    "six seven seven eight nine nine five five";
+}
+.one {
+	grid-area: one;
+	background-color: black;
+	padding: 10px;
 }
 
-/* Header/Blog Title */
-.header {
-  padding: 30px;
-  text-align: center;
-  background: white;
+.one > h1 {
+font-size: 70px;
+color: #d5f5ec;
+font-family: Quantify;
 }
+.one > p {
+font-size: 40px;
+color: #178a69;
+font-family: Quantify;
+}
+.ten {
+	background-color: black;
+	grid-area: ten;
+}
+.eleven {
+	background-color: black;
+	grid-area: eleven;
+}
+.eleven > h2 {
+	font-size: 70px;
+	color: #d5f5ec;
+	font-family: Quantify;
+	text-align: center;
+}
+.ten > .vl {
+  border-left: 5px solid #d5f5ec;
+  float:right;
+  height: 80%;
+}
+.twelve {
+	background-color: black;
+	grid-area: twelve;
+}
+.two {
+	grid-area: two;
+	background-color: #d5f5ec;
+	padding: 10px;
+}
+.three {
+	grid-area: three;
+	background-color: #d5f5ec;
+	padding: 5px;
+}
+.four {
+	grid-area: four;
+	background-color: #d5f5ec;
+	border-style: dashed;
+	border-width: 5px;
+	border-color: black;
+}
+.five {
+	grid-area: five;
+	background-color: white;
+}
+.five > h2 {
+font-size: 40px;
+color:  #178a69;
+text-align: center;
+font-family: Quantify;
+}
+.five > center {
+font-size: 50px;
 
-.header h1 {
-  font-size: 50px;
 }
-
-/* Style the top navigation bar */
-.topnav {
-  overflow: hidden;
-  background-color: #333;
+.five > p {
+font-size: 20px;
+color:  black;
+text-align: center;
+font-family: Montserrat;
 }
-
-/* Style the topnav links */
-.topnav a {
-  float: left;
-  display: block;
-  color: #f2f2f2;
-  text-align: center;
-  padding: 14px 16px;
-  text-decoration: none;
+.six {
+	grid-area: six;
+	background-color: #d5f5ec;
+	padding: 10px;
 }
-
-/* Change color on hover */
-.topnav a:hover {
-  background-color: #ddd;
-  color: black;
+.seven {
+	grid-area: seven;
+	background-color: #d5f5ec;
+	padding: 5px;
 }
-
-/* Create two unequal columns that floats next to each other */
-/* Left column */
-.leftcolumn {   
-  float: left;
-  width: 75%;
+.eight {
+	grid-area: eight;
+	background-color: #d5f5ec;
+	padding: 5px;
 }
-
-/* Right column */
-.rightcolumn {
-  float: left;
-  width: 25%;
-  background-color: #f1f1f1;
-  padding-left: 20px;
+.nine {
+	grid-area: nine;
+	background-color: #d5f5ec;
+	border-style: dashed;
+	border-width: 5px;
+	border-color: black;
+	padding: 10px;
 }
-
-/* Fake image */
-.fakeimg {
-background-color: #aaa;
-  width: 100%;
-  padding: 20px;
-}
-
-/* Add a card effect for articles */
-.card {
-  background-color: white;
-  padding: 20px;
-  margin-top: 20px;
-}
-
-/* Clear floats after the columns */
-.row:after {
-  content: "";
-  display: table;
-  clear: both;
-}
-
-/* Footer */
-.footer {
-  padding: 20px;
-  text-align: center;
-  background: #ddd;
-  margin-top: 20px;
-}
-
-/* Responsive layout - when the screen is less than 800px wide, make the two columns stack on top of each other instead of next to each other */
-@media screen and (max-width: 800px) {
-  .leftcolumn, .rightcolumn {   
-    width: 100%;
-    padding: 0;
-  }
-}
-
-/* Responsive layout - when the screen is less than 400px wide, make the navigation links stack on top of each other instead of next to each other */
-@media screen and (max-width: 400px) {
-  .topnav a {
-    float: none;
-    width: 100%;
-  }
-}
-</style>
